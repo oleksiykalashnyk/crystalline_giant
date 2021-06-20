@@ -36,7 +36,7 @@ const renderApp = () => {
 const randomNum = () => {
     const nonActiveSkills = data.filter(data => (data.status === 0) ? data.name : 0);
     let randomNumInArray;
-    if(nonActiveSkills.length > 1){
+    if(nonActiveSkills.length >= 1){
         randomNumInArray = Math.floor(Math.random() * nonActiveSkills.length);
         data.forEach(e => {
             if (e.name === nonActiveSkills[randomNumInArray].name){
